@@ -1,9 +1,18 @@
-Last PR Triage Run: 2026-02-24T06:29:13Z
-Workflow Run ID: 22339393226
-Agent PRs Found: 2
-Actions Taken: 1 comment added
+Last PR Triage Run: 2026-02-24T12:22:00Z
+Workflow Run ID: 22350568744
+Total Open PRs: 14 (5 analyzed in detail)
 
-PR #2516: FAST TRACK - Approved for immediate merge (docs only, 100 priority, 10 risk)
-PR #2470: HOLD - Draft status, unstable CI (55 priority, 60 risk)
+High Priority PRs:
+- PR #2513: fix(recipe-cli) - APPROVE (85 priority, 40 risk)
+- PR #2514: fix(recipes) auto-stage - REVIEW (85 priority, 55 risk)
 
-Next Run: Automatic on next trigger
+Medium Priority:
+- PR #2516: [docs] Diátaxis - APPROVE (65 priority, 25 risk)
+
+CI Issues (Unstable):
+- PR #2515: CONTRIBUTING.md (45 priority, 30 risk)
+- PR #2517: Quick Start docs (45 priority, 30 risk)
+
+Pending Full Analysis: 9 PRs (#2512, #2511, #2510, #2509, #2499, #2507, #2470, #1784, #1376)
+
+Next Run: Automatic on next trigger or manual analysis

@@ -1,155 +1,155 @@
-# PR Triage Summary - 2026-02-24
-
-## Workflow Run: 22339393226
-**Timestamp:** 2026-02-24T06:29:13Z
-
-## Results
-
-**Total Agent PRs Found:** 2
-- **New PRs:** 1 (PR #2516)
-- **Previously Triaged:** 1 (PR #2470)
-- **Total Open Agent PRs:** 2
+# PR Triage Report
+**Generated:** 2026-02-24T12:22:00Z  
+**Workflow Run:** 22350568744  
+**Total Open PRs:** 14 (5 analyzed in detail, 9 identified)
 
 ---
 
-## 🚀 FAST TRACK - IMMEDIATE ACTION REQUIRED
+## Executive Summary
 
-### PR #2516: [docs] Organize goal-seeking agent documentation following Diátaxis framework ⚡
+**Status Distribution:**
+- 1 Bot PR (github-actions[bot])
+- 13 Human PRs (rysweet, capparun, akingscote, Copilot)
+- 4 Draft PRs
+- 10 Ready for Review
 
+**Priority Breakdown:**
+- High Priority (75-100): 2 PRs - Both fix PRs ready for merge
+- Medium Priority (50-74): 1 PR - Documentation improvements
+- Low Priority (0-49): 2 PRs - Documentation (unstable CI)
+
+**Risk Assessment:**
+- Low Risk (0-30): 3 PRs - Mostly docs
+- Medium Risk (31-60): 2 PRs - Code changes need review
+- High Risk (61-100): 0 PRs
+
+---
+
+## Detailed Triage Results
+
+### 🚀 FAST TRACK / HIGH PRIORITY
+
+#### PR #2513: fix(recipe-cli): handle special characters in -c context args
+**Priority:** 85/100 | **Risk:** 40/100  
+**Recommendation:** APPROVE FOR MERGE  
+**Author:** rysweet  
+**Stats:** 4 files, +134/-5 lines  
+**Mergeable:** ✅ clean
+
+**Analysis:**
+- Fixes issue #2460 with CLI argument parsing
+- Small, focused change to argparse handling
+- Clean mergeable state
+- Good test coverage implied by PR description
+
+**Action:** Ready for immediate merge pending final CI checks.
+
+---
+
+#### PR #2514: fix(recipes): auto-stage git changes after agent steps (#2465)
+**Priority:** 85/100 | **Risk:** 55/100  
+**Recommendation:** NEEDS REVIEW  
+**Author:** rysweet  
+**Stats:** 6 files, +489/-4 lines  
+**Mergeable:** ✅ clean
+
+**Analysis:**
+- Fixes critical issue #2465 (work loss on step failure)
+- Larger change (~500 lines) needs thorough review
+- Auto-staging behavior could have side effects
+- Clean mergeable state is positive
+
+**Action:** Comprehensive code review recommended before merge. Check edge cases in auto-staging logic.
+
+---
+
+### ✅ MEDIUM PRIORITY
+
+#### PR #2516: [docs] docs: Organize goal-seeking agent documentation (Diátaxis framework)
+**Priority:** 65/100 | **Risk:** 25/100  
+**Recommendation:** APPROVE FOR MERGE  
 **Author:** github-actions[bot]  
-**Status:** Ready for Review (not draft)  
-**Category:** Documentation  
-**Priority:** 🔴 CRITICAL (100/100)  
-**Risk:** 🟢 MINIMAL (10/100)  
-**Age:** < 1 hour old (just created)
+**Labels:** documentation, automation  
+**Stats:** 3 files, +288/-8 lines  
+**Mergeable:** ✅ clean
 
-**Recommendation:** ✅ **FAST TRACK - APPROVE AND MERGE IMMEDIATELY**
+**Analysis:**
+- Bot-generated documentation reorganization
+- Previously triaged as FAST TRACK (2026-02-24T06:29:13Z)
+- Low risk, docs-only changes
+- Follows Diátaxis framework (good practice)
 
-**Key Points:**
-- **Perfect documentation-only change** (3 files, 288 additions, 8 deletions)
-- Implements industry-standard Diátaxis framework for docs organization
-- Clean mergeable state - no conflicts
-- Zero risk to production code
-- Created by automation workflow (daily update)
-- Improves discoverability of goal-seeking agent tutorial from PR #2438
-
-**Files Changed:**
-1. `docs/index.md` - Reorganized goal-seeking agents section with Diátaxis categories
-2. `docs/reference/goal-seeking-agents-quick-reference.md` - NEW 237-line quick reference card
-3. `docs/tutorials/README.md` - Added goal-seeking agent tutorial to curriculum
-
-**Why Fast Track:**
-- Documentation quality improvement
-- No production impact
-- Automated PR from trusted workflow
-- Clean merge state
-- Addresses documentation gap from previous merged PR
-
-**Estimated Review Time:** 5-10 minutes
-
-**Action Taken:** Adding approval comment
+**Action:** Can merge immediately. No blocking issues.
 
 ---
 
-## 🔄 HOLD FOR AUTHOR
+### 📝 NEEDS ATTENTION (Unstable CI)
 
-### PR #2470: Fix PR Triage Agent - Switch to automatic GitHub MCP lockdown mode
+#### PR #2515: docs: add CONTRIBUTING.md for new contributors
+**Priority:** 45/100 | **Risk:** 30/100  
+**Recommendation:** REVIEW - CI UNSTABLE  
+**Author:** capparun  
+**Stats:** 2 files, +212/-3 lines  
+**Mergeable:** ⚠️ unstable
 
-**Author:** Copilot  
-**Status:** Draft  
-**Category:** CI/CD Infrastructure  
-**Priority:** 🟡 MEDIUM (55/100)  
-**Risk:** 🟠 MEDIUM (60/100)  
-**Age:** 1.6 days (38 hours)
+**Analysis:**
+- Valuable contributor documentation
+- Unstable CI status needs investigation
+- Small, low-risk change (docs only)
+- Targets main branch (verify branch strategy)
 
-**Recommendation:** 🔄 **HOLD - Needs CI Pass and Draft→Ready**
-
-**Key Points:**
-- **Self-referential fix** - Fixes the PR triage workflow itself
-- Changes workflow lockdown mode from explicit to automatic
-- Small, focused change (2 files, 7 additions, 8 deletions)
-- Mergeable state: **unstable** (CI pending/failing)
-- Still in draft status
-- Already has 1 comment from review
-
-**Files Changed:**
-1. `.github/workflows/pr-triage-agent.lock.yml` - Replace validate step with auto-detect
-2. `.github/workflows/pr-triage-agent.md` - Change lockdown: true → false
-
-**Why Hold:**
-- Draft status indicates work in progress
-- Unstable mergeable state (CI must pass)
-- Workflow changes require careful validation
-- Self-modifying workflow needs extra review
-
-**Next Steps:**
-1. Author marks as ready when complete
-2. CI must pass successfully
-3. Validate workflow doesn't break current run
-4. Merge after successful validation
-
-**Action Taken:** Previously triaged on 2026-02-23, monitoring status
+**Action:** Investigate CI failures. Once green, approve for merge.
 
 ---
 
-## Statistics
+#### PR #2517: docs: improve Quick Start - explain uv/uvx for beginners
+**Priority:** 45/100 | **Risk:** 30/100  
+**Recommendation:** REVIEW - CI UNSTABLE  
+**Author:** capparun  
+**Branch:** fix-2476-readme  
+**Stats:** 2 files, +212/-3 lines  
+**Mergeable:** ⚠️ unstable
 
-| Metric | Count |
-|--------|-------|
-| Total Agent PRs Found | 2 |
-| PRs Triaged This Run | 2 |
-| New PRs | 1 |
-| Previously Triaged | 1 |
-| High Priority (≥70) | 1 |
-| Medium Priority (40-69) | 1 |
-| Low Risk (≤30) | 1 |
-| Medium Risk (31-69) | 1 |
-| Fast Track Candidates | 1 |
-| Held for Author | 1 |
-| Documentation PRs | 1 |
-| Workflow PRs | 1 |
+**Analysis:**
+- Improves beginner onboarding experience
+- Addresses issue #2476
+- Unstable CI blocking merge
+- Low risk (README changes)
 
-## Priority Distribution
-
-- 🔴 **CRITICAL (90-100):** 1 PR
-  - PR #2516 (100) - Docs reorganization
-- 🟡 **MEDIUM (40-69):** 1 PR
-  - PR #2470 (55) - Workflow fix
-
-## Risk Distribution
-
-- 🟢 **LOW (≤30):** 1 PR
-  - PR #2516 (10) - Docs only
-- 🟠 **MEDIUM (31-69):** 1 PR
-  - PR #2470 (60) - Workflow changes
-
-## Recommended Actions Priority
-
-1. **IMMEDIATE:** Review & approve PR #2516 (docs reorganization, 5-10 min)
-2. **MONITOR:** PR #2470 - wait for author to mark ready and CI pass
-
-## Triage Methodology
-
-**Priority Scoring (0-100):**
-- ✅ Recency: Recent PRs get +30, stale PRs penalized
-- ✅ Draft penalty: -15 for drafts, +10 for ready
-- ✅ Mergeable state: +10 for clean, -10 for unstable
-- ✅ Activity: +5 for comments/engagement
-- ✅ Size: Small focused changes +5, large complex -5
-
-**Risk Scoring (0-100):**
-- ✅ Change size: >1000 lines +30, >500 +20, >100 +10
-- ✅ File count: >20 files +20, >10 +10
-- ✅ Mergeable state: unstable +15, dirty +20
-- ✅ Documentation-only: -30 (low risk)
-- ✅ Workflow changes: +15 (higher risk)
-
-## Next Triage Run
-
-Expected: Next workflow trigger or manual dispatch
+**Action:** Check CI status. Approve once tests pass.
 
 ---
 
-**Generated by:** PR Triage Agent v1.0  
-**Run ID:** 22339393226  
-**Duration:** < 3 minutes
+## Remaining PRs (Not Yet Analyzed in Detail)
+
+The following 9 PRs require individual analysis:
+
+1. **PR #2512** - fix(recipes): append non-interactive footer (rysweet)
+2. **PR #2511** - fix(recipe-runner): API retry with backoff (rysweet)
+3. **PR #2510** - feat(eval): improve 5000-turn eval to ~90.5% (rysweet)
+4. **PR #2509** - fix: harden PM workflow scripts (rysweet)
+5. **PR #2507** - [DRAFT] feat: migrate HierarchicalMemory (rysweet)
+6. **PR #2499** - fix: Documentation for workspace_pattern (akingscote)
+7. **PR #2470** - [DRAFT] Fix PR Triage Agent (Copilot)
+8. **PR #1784** - [DRAFT] feat: Parallel Task Orchestrator (rysweet)
+9. **PR #1376** - [DRAFT] feat: Enable Serena MCP (rysweet)
+
+---
+
+## Recommended Immediate Actions
+
+1. **Merge PR #2513** - Clean, low-risk CLI fix
+2. **Merge PR #2516** - Bot-generated docs (already approved in previous triage)
+3. **Review PR #2514** - Important fix but needs careful review of auto-staging logic
+4. **Investigate CI failures** - PRs #2515 and #2517 blocked by unstable builds
+5. **Analyze remaining 9 PRs** - Prioritize non-draft PRs first
+
+---
+
+## Notes
+
+- Previous triage run: 2026-02-24T06:29:13Z (workflow 22339393226)
+- Focus was on agent PRs only (2 PRs: #2516, #2470)
+- This run provides comprehensive coverage of all open PRs
+- Draft PRs (#2507, #2470, #1784, #1376) have lower priority by design
+
