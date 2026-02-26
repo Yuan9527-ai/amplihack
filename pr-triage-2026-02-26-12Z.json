@@ -1,0 +1,86 @@
+{
+  "last_run": "2026-02-26T12:21:59Z",
+  "workflow_run": "22441826098",
+  "total_prs": 6,
+  "agent_created": 4,
+  "categories": {
+    "ready_to_merge": [2554],
+    "in_progress_active": [2540],
+    "in_progress_stalled": [2533, 2515],
+    "stale_needs_decision": [1784, 1376]
+  },
+  "triage_results": [
+    {
+      "pr_number": 2554,
+      "title": "[docs] Daily Documentation Updates - February 26, 2026",
+      "author": "github-actions[bot]",
+      "category": "ready_to_merge",
+      "priority_score": 75,
+      "risk_score": 20,
+      "age_days": 0,
+      "recommendation": "AUTO_MERGE",
+      "rationale": "Automated doc bot PR, 1432 additions (4 files), zero risk, no conflicts. Standard documentation update."
+    },
+    {
+      "pr_number": 2540,
+      "title": "fix: prevent crash when renaming directory containing CWD",
+      "author": "nlscng",
+      "category": "in_progress_active",
+      "priority_score": 65,
+      "risk_score": 30,
+      "age_days": 1,
+      "recommendation": "WAIT_FOR_AUTHOR",
+      "rationale": "Draft PR with active reviews (17 review comments, 7 general comments). Copilot reviewed and provided feedback. Author is actively addressing issues. Let development continue."
+    },
+    {
+      "pr_number": 2533,
+      "title": "Convert precommit_manager.py from loose script to proper skill",
+      "author": "Copilot",
+      "category": "in_progress_stalled",
+      "priority_score": 45,
+      "risk_score": 10,
+      "age_days": 1,
+      "recommendation": "NUDGE_AUTHOR",
+      "rationale": "Copilot-created PR that's been dormant for 1 day. Small change (36 additions, 5 files), low risk. May need human review to merge."
+    },
+    {
+      "pr_number": 2515,
+      "title": "docs: add CONTRIBUTING.md for new contributors",
+      "author": "capparun",
+      "category": "in_progress_stalled",
+      "priority_score": 40,
+      "risk_score": 10,
+      "age_days": 2,
+      "recommendation": "REQUEST_OWNER_REVIEW",
+      "rationale": "Draft PR with 2 CHANGES_REQUESTED reviews from owner (rysweet). Author has made 5 review comments, likely responding to feedback. Owner needs to re-review."
+    },
+    {
+      "pr_number": 1784,
+      "title": "feat: Parallel Task Orchestrator for large-scale migrations",
+      "author": "rysweet",
+      "category": "stale_needs_decision",
+      "priority_score": 25,
+      "risk_score": 70,
+      "age_days": 86,
+      "recommendation": "CLOSE_OR_REACTIVATE",
+      "rationale": "86 days old, 11,337 additions (39 files), high complexity. Large-scale feature that's gone stale. Owner should decide: close, rebase, or reactivate."
+    },
+    {
+      "pr_number": 1376,
+      "title": "feat: Enable Serena MCP by default (simple integration)",
+      "author": "rysweet",
+      "category": "stale_needs_decision",
+      "priority_score": 25,
+      "risk_score": 40,
+      "age_days": 101,
+      "recommendation": "CLOSE_OR_REACTIVATE",
+      "rationale": "101 days old, 361 additions (5 files). 3+ months stale. May be superseded by other work or no longer relevant. Owner decision needed."
+    }
+  ],
+  "summary": {
+    "ready_to_merge": 1,
+    "active_development": 1,
+    "needs_attention": 2,
+    "stale_prs": 2
+  }
+}
