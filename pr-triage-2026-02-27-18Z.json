@@ -1,0 +1,78 @@
+{
+  "run_timestamp": "2026-02-27T18:17:00Z",
+  "workflow_run_id": "22498279302",
+  "prs_analyzed": 2,
+  "agent_created_prs": [
+    {
+      "pr_number": 2609,
+      "title": "fix: prevent Issue Classifier cascade failures on [agentics] tracking issues",
+      "author": "Copilot",
+      "created_at": "2026-02-27T06:45:24Z",
+      "updated_at": "2026-02-27T07:07:18Z",
+      "draft": true,
+      "state": "open",
+      "ci_status": "pending",
+      "commits": 2,
+      "changed_files": 2,
+      "additions": 12,
+      "deletions": 1,
+      "category": "bug_fix",
+      "risk_level": "low",
+      "priority_score": 85,
+      "recommendation": "ready_for_review",
+      "files_changed": [
+        ".github/workflows/issue-classifier.lock.yml",
+        ".github/workflows/issue-classifier.md"
+      ],
+      "analysis": {
+        "scope": "workflow automation fix",
+        "complexity": "low",
+        "test_coverage": "implicit (workflow behavior)",
+        "breaking_changes": false,
+        "security_impact": false,
+        "rationale": "Fixes infinite loop cascade in Issue Classifier by filtering [agentics] tracking issues. Clean 2-file change adding pre-activation filter. Low risk, high impact bug fix.",
+        "concerns": []
+      }
+    },
+    {
+      "pr_number": 2579,
+      "title": "[docs] docs: daily documentation updates for merged PRs (2026-02-27)",
+      "author": "github-actions[bot]",
+      "created_at": "2026-02-27T06:19:52Z",
+      "updated_at": "2026-02-27T06:27:53Z",
+      "draft": false,
+      "state": "open",
+      "ci_status": "pending",
+      "commits": 1,
+      "changed_files": 3,
+      "additions": 333,
+      "deletions": 2,
+      "category": "documentation",
+      "risk_level": "minimal",
+      "priority_score": 70,
+      "recommendation": "auto_merge_candidate",
+      "files_changed": [
+        "docs/AGENT_MEMORY_QUICKSTART.md",
+        "docs/HOOK_CONFIGURATION_GUIDE.md",
+        "docs/howto/cli-flags-reference.md"
+      ],
+      "analysis": {
+        "scope": "documentation updates",
+        "complexity": "minimal",
+        "test_coverage": "n/a (documentation)",
+        "breaking_changes": false,
+        "security_impact": false,
+        "rationale": "Automated daily docs update covering 5 merged PRs. Follows Diátaxis framework. Documentation-only changes carry minimal risk. Ready for auto-merge once CI passes.",
+        "concerns": []
+      }
+    }
+  ],
+  "categories_summary": {
+    "ready_for_review": [2609],
+    "auto_merge_candidates": [2579]
+  },
+  "next_actions": {
+    "pr_2609": "Mark as ready for review once CI passes. Addresses critical infinite loop bug.",
+    "pr_2579": "Auto-merge candidate. Documentation-only changes with low risk."
+  }
+}
