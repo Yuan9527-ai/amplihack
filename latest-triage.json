@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-02-28T00:35:00Z",
+  "workflow_run": "22509289495",
+  "summary": {
+    "total_prs": 10,
+    "new_prs": 5,
+    "stale_prs": 2,
+    "draft_prs": 4
+  },
+  "priority_breakdown": {
+    "immediate_review": 3,
+    "standard_review": 2,
+    "quick_merge": 2,
+    "investigate": 1,
+    "stale": 2
+  },
+  "high_priority_prs": [
+    {
+      "number": 2658,
+      "title": "fix: complete session TTL pruning for missing completed_at",
+      "priority": "high",
+      "risk": "medium",
+      "type": "bugfix"
+    },
+    {
+      "number": 2610,
+      "title": "docs: add CONTRIBUTING.md for new contributors",
+      "priority": "high",
+      "risk": "low",
+      "type": "docs"
+    },
+    {
+      "number": 2609,
+      "title": "fix: prevent Issue Classifier cascade failures",
+      "priority": "high",
+      "risk": "medium",
+      "type": "bugfix",
+      "status": "draft"
+    }
+  ],
+  "stale_prs": [
+    {
+      "number": 1784,
+      "age_days": 88,
+      "title": "feat: Parallel Task Orchestrator"
+    },
+    {
+      "number": 1376,
+      "age_days": 103,
+      "title": "feat: Enable Serena MCP by default"
+    }
+  ],
+  "actions_taken": {
+    "issue_created": true,
+    "comments_added": 6,
+    "reports_generated": 2
+  }
+}

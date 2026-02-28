@@ -1,0 +1,109 @@
+{
+  "triage_date": "2026-02-28T00:35:38.957746Z",
+  "workflow_run": "22509289495",
+  "total_prs_analyzed": 10,
+  "pr_analysis": {
+    "2659": {
+      "title": "test: document and test detect_session_type keyword priority",
+      "type": "test",
+      "risk": "low",
+      "priority": "medium",
+      "recommendation": "Review and merge - test coverage improvement",
+      "rationale": "Comprehensive test coverage for session type detection"
+    },
+    "2658": {
+      "title": "fix: complete session TTL pruning for missing completed_at",
+      "type": "bugfix",
+      "risk": "medium",
+      "priority": "high",
+      "recommendation": "Priority review - session management fix",
+      "rationale": "Fixes session cleanup edge case"
+    },
+    "2657": {
+      "title": "fix: restructure dev.md to lead with user-facing content",
+      "type": "docs",
+      "risk": "low",
+      "priority": "low",
+      "recommendation": "Quick review and merge - documentation improvement",
+      "rationale": "Developer experience enhancement"
+    },
+    "2653": {
+      "title": "docs: add /dev developer example, tutorial",
+      "type": "docs",
+      "risk": "low",
+      "priority": "medium",
+      "recommendation": "Review and merge - valuable documentation",
+      "rationale": "Improves developer onboarding"
+    },
+    "2610": {
+      "title": "docs: add CONTRIBUTING.md for new contributors",
+      "type": "docs",
+      "risk": "low",
+      "priority": "high",
+      "recommendation": "Review and merge - important for contributors",
+      "rationale": "Critical for open source contribution"
+    },
+    "2609": {
+      "title": "fix: prevent Issue Classifier cascade failures",
+      "type": "bugfix",
+      "risk": "medium",
+      "priority": "high",
+      "recommendation": "Review draft, may need CI validation",
+      "rationale": "Prevents workflow cascading failures"
+    },
+    "2579": {
+      "title": "docs: daily documentation updates",
+      "type": "docs",
+      "risk": "low",
+      "priority": "low",
+      "recommendation": "Auto-merge candidate if CI passes",
+      "rationale": "Automated documentation sync"
+    },
+    "2515": {
+      "title": "docs: add CONTRIBUTING.md (duplicate of 2610?)",
+      "type": "docs",
+      "risk": "low",
+      "priority": "low",
+      "recommendation": "Check for duplicate, possibly close",
+      "rationale": "May be superseded by #2610"
+    },
+    "1784": {
+      "title": "feat: Parallel Task Orchestrator",
+      "type": "feature",
+      "risk": "high",
+      "priority": "low",
+      "recommendation": "Close or update - 88 days stale",
+      "rationale": "Too old, likely needs rebase"
+    },
+    "1376": {
+      "title": "feat: Enable Serena MCP by default",
+      "type": "feature",
+      "risk": "medium",
+      "priority": "low",
+      "recommendation": "Close or update - 103 days stale",
+      "rationale": "Likely superseded or abandoned"
+    }
+  },
+  "recommendations": {
+    "immediate_review": [
+      "2658",
+      "2610",
+      "2609"
+    ],
+    "standard_review": [
+      "2659",
+      "2653"
+    ],
+    "quick_merge": [
+      "2657",
+      "2579"
+    ],
+    "investigate_duplicate": [
+      "2515"
+    ],
+    "close_stale": [
+      "1784",
+      "1376"
+    ]
+  }
+}
