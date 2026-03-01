@@ -87,4 +87,50 @@
       "comment_ratio": 0.13233887383871312
     }
   }
+}{
+  "date": "2026-03-01",
+  "timestamp": 1772380819,
+  "metrics": {
+    "size": {
+      "total_loc": 1535219,
+      "python_loc": 648666,
+      "markdown_loc": 827591,
+      "yaml_loc": 32563,
+      "js_loc": 264,
+      "shell_loc": 8911
+    },
+    "quality": {
+      "quality_score": 47.87320635507682,
+      "large_files_count": 320,
+      "test_coverage_score": 12.867597429614904,
+      "code_org_score": 9.0,
+      "doc_score": 9.145608925461914,
+      "churn_stability": 6.859999999999999
+    },
+    "tests": {
+      "test_loc": 278339,
+      "test_files": 734,
+      "test_to_source_ratio": 0.4289199143204968
+    },
+    "churn": {
+      "source": {
+        "added": 117073,
+        "deleted": 17573,
+        "files": 814
+      },
+      "lock_files": {
+        "added": 6,
+        "deleted": 7,
+        "files": 2
+      }
+    },
+    "workflows": {
+      "total_workflows": 25,
+      "lock_files": 17
+    },
+    "docs": {
+      "docs_count": 684,
+      "docs_loc": 296743
+    }
+  }
 }
