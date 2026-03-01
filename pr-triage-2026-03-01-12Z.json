@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-03-01T12:14:53Z",
+  "workflow_run": "22543175999",
+  "agent_prs": [
+    {
+      "number": 2746,
+      "title": "[docs] Daily documentation update - recipe runner changes (2026-03-01)",
+      "author": "github-actions[bot]",
+      "created_at": "2026-03-01T06:17:36Z",
+      "updated_at": "2026-03-01T06:25:07Z",
+      "age_hours": 5.9,
+      "category": "documentation",
+      "risk_level": "minimal",
+      "priority": "low",
+      "mergeable_state": "clean",
+      "draft": false,
+      "files_changed": 5,
+      "additions": 669,
+      "deletions": 1,
+      "labels": ["documentation", "automation"],
+      "files": [
+        "docs/explanation/recipe-runner-enforcement.md (NEW - 232 lines)",
+        "docs/explanation/smart-context-inference.md (NEW - 394 lines)",
+        "docs/howto/recipe-cli-commands.md (+22 lines)",
+        "docs/reference/recipe-cli-reference.md (+18 lines)",
+        "docs/tutorials/dev-orchestrator-tutorial.md (+3/-1 lines)"
+      ],
+      "assessment": {
+        "type": "automated_documentation",
+        "purpose": "Daily documentation update following Diátaxis framework to reflect PRs #2741 (Recipe Runner Mandatory Enforcement) and #2738 (Smart Context Inference)",
+        "complexity": "low",
+        "conflicts": false,
+        "test_impact": "none - documentation only",
+        "recommendation": "APPROVE_AND_MERGE",
+        "rationale": "High-quality automated documentation update. Creates 2 new explanation documents (626 lines) and updates 3 existing docs with context inference examples. Follows Diátaxis framework correctly. All changes are documentation-only with no code impact. Status is 'clean' and mergeable. Age: 5.9 hours. No review comments or concerns. Ready for immediate merge.",
+        "concerns": [],
+        "next_steps": [
+          "Merge immediately - documentation is ready",
+          "Monitor for any build failures (unlikely given doc-only changes)"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_agent_prs": 1,
+    "by_priority": {
+      "low": 1
+    },
+    "by_risk": {
+      "minimal": 1
+    },
+    "by_category": {
+      "documentation": 1
+    },
+    "recommendations": {
+      "immediate_merge": 1,
+      "approve_and_merge": 0,
+      "request_review": 0,
+      "needs_changes": 0,
+      "close": 0
+    }
+  },
+  "actions_needed": {
+    "pr_2746": "READY FOR IMMEDIATE MERGE - Clean documentation update with no concerns. Automated daily docs workflow following established patterns."
+  },
+  "comparison_with_previous_triage": {
+    "pr_2609_status": "Not present in current triage (may have been merged or closed since 2026-03-01T00:44:35Z)",
+    "new_prs": [2746]
+  }
+}
