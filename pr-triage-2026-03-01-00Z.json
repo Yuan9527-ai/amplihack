@@ -62,5 +62,11 @@
   },
   "actions_needed": {
     "pr_2609": "READY TO MERGE - Remove draft status, request final review, then merge. Fixes cascade issue documented in repository memory."
+  },
+  "changes_since_last_triage": {
+    "last_triage": "2026-02-28T12:14:05Z",
+    "hours_elapsed": 12.5,
+    "pr_2678_status": "merged or closed (no longer in open PRs)",
+    "pr_2609_status": "still open, still draft, no new changes since last update (2026-02-28T06:18:21Z)"
   }
 }
