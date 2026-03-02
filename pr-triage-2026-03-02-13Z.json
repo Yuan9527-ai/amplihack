@@ -1,0 +1,242 @@
+{
+  "timestamp": "2026-03-02T13:08:32Z",
+  "workflow_run": "22577358924",
+  "agent_prs": [
+    {
+      "number": 2774,
+      "title": "fix: ensure /dev reliably invokes dev-orchestrator",
+      "author": "rysweet",
+      "created_at": "2026-03-02T04:44:25Z",
+      "updated_at": "2026-03-02T05:54:32Z",
+      "age_hours": 8.4,
+      "draft": false,
+      "state": "open",
+      "mergeable": false,
+      "mergeable_state": "dirty",
+      "additions": 58,
+      "deletions": 177,
+      "changed_files": 5,
+      "commits": 6,
+      "labels": [],
+      "files": [
+        {"filename": ".claude/commands/amplihack/dev.md", "additions": 5, "deletions": 176, "status": "modified"},
+        {"filename": ".claude/settings.json", "additions": 16, "deletions": 0, "status": "modified"},
+        {"filename": ".claude/tools/amplihack/hooks/workflow_classification_reminder.py", "additions": 20, "deletions": 0, "status": "modified"},
+        {"filename": "pyproject.toml", "additions": 1, "deletions": 1, "status": "modified"},
+        {"filename": "src/amplihack/utils/uvx_settings_template.json", "additions": 16, "deletions": 0, "status": "modified"}
+      ],
+      "category": "critical_bugfix",
+      "risk_level": "medium",
+      "priority": "high",
+      "assessment": {
+        "type": "architectural_fix",
+        "purpose": "Fix /dev command to reliably delegate to dev-orchestrator skill instead of duplicating recipe runner logic",
+        "complexity": "medium",
+        "conflicts": true,
+        "test_impact": "none",
+        "recommendation": "REBASE_THEN_MERGE",
+        "rationale": "Critical architectural fix addressing command routing issues. Simplifies /dev from 182 lines to 51-line thin alias. Adds missing UserPromptSubmit hooks to UVX template. Fixes competing instructions between hooks. BLOCKING: mergeable_state='dirty' indicates merge conflicts. Author is OWNER (rysweet). Net -119 lines. Age: 8.4 hours.",
+        "concerns": [
+          "BLOCKING: Merge conflicts present (mergeable_state='dirty')",
+          "No labels applied - should have 'bugfix' or 'critical' label",
+          "Changes core routing architecture - needs careful review",
+          "Touches settings.json and UVX template - deployment impact"
+        ],
+        "next_steps": [
+          "REQUIRED: Rebase on main to resolve conflicts",
+          "Add appropriate labels (bugfix, critical)",
+          "Review hook logic changes for correctness",
+          "Test /dev command routing manually",
+          "Verify UVX template changes don't break other projects",
+          "Approve and merge after rebase"
+        ]
+      }
+    },
+    {
+      "number": 2727,
+      "title": "feat: fleet TUI managed/unmanaged sessions + pirate ship logo",
+      "author": "rysweet",
+      "created_at": "2026-02-28T22:28:00Z",
+      "updated_at": "2026-03-02T05:45:43Z",
+      "age_hours": 62.7,
+      "draft": false,
+      "state": "open",
+      "mergeable": null,
+      "mergeable_state": "unknown",
+      "additions": 16717,
+      "deletions": 353,
+      "changed_files": 63,
+      "commits": 37,
+      "labels": [],
+      "files": [],
+      "category": "major_feature",
+      "risk_level": "high",
+      "priority": "medium",
+      "assessment": {
+        "type": "feature_development",
+        "purpose": "Fleet orchestration TUI enhancements including VM listing fixes, project management, session creation, and CI-blocking pyright error fixes",
+        "complexity": "high",
+        "conflicts": false,
+        "test_impact": "medium",
+        "recommendation": "NEEDS_COMPREHENSIVE_REVIEW",
+        "rationale": "Large feature PR with 16,717 additions across 63 files and 37 commits. Includes multiple concerns: TUI VM listing fix (azlin API integration), project management UI, session creation, and unrelated pyright error fixes. Age: 62.7 hours (2.6 days). mergeable_state='unknown' needs CI to complete. High risk due to scope.",
+        "concerns": [
+          "Very large scope: 16,717 additions / 63 files / 37 commits",
+          "Multiple unrelated concerns mixed together",
+          "Includes 'fix pre-existing pyright errors' unrelated to fleet TUI",
+          "CI status unknown - needs to complete",
+          "No labels applied",
+          "No test coverage mentioned in description",
+          "Unchecked test plan items in description",
+          "Age: 2.6 days without review activity"
+        ],
+        "next_steps": [
+          "REQUIRED: Wait for CI to complete",
+          "Consider splitting into focused PRs (TUI fixes vs pyright fixes)",
+          "Add appropriate labels (feature, tui, needs-review)",
+          "Complete test plan checklist",
+          "Add integration tests for TUI functionality",
+          "Request review from maintainer",
+          "Comprehensive code review focusing on azlin API usage",
+          "Test manually: fleet tui launch, VM listing, project management"
+        ]
+      }
+    },
+    {
+      "number": 2719,
+      "title": "docs: streamline Claude CLI installation in PREREQUISITES.md",
+      "author": "voidborne-d",
+      "created_at": "2026-02-28T21:06:05Z",
+      "updated_at": "2026-03-02T07:08:58Z",
+      "age_hours": 64.0,
+      "draft": false,
+      "state": "open",
+      "mergeable": true,
+      "mergeable_state": "unstable",
+      "additions": 13,
+      "deletions": 51,
+      "changed_files": 1,
+      "commits": 1,
+      "labels": [],
+      "files": [
+        {"filename": "docs/PREREQUISITES.md", "additions": 13, "deletions": 51, "status": "modified"}
+      ],
+      "category": "documentation_improvement",
+      "risk_level": "low",
+      "priority": "medium",
+      "assessment": {
+        "type": "documentation_refactoring",
+        "purpose": "Streamline Claude CLI installation instructions by consolidating platform tables and removing self-contradictory npm instructions",
+        "complexity": "low",
+        "conflicts": false,
+        "test_impact": "none",
+        "recommendation": "NEEDS_CI_CHECK_THEN_MERGE",
+        "rationale": "Clean documentation improvement. Consolidates 4 verbose blocks into single platform table. Removes contradictory content (said npm deprecated then provided detailed npm steps). Net -38 lines. Single file. Author: CONTRIBUTOR (voidborne-d). mergeable=true but mergeable_state='unstable' suggests CI issues. Fixes issue #2371. Age: 64 hours (2.7 days).",
+        "concerns": [
+          "CI status 'unstable' - check what's failing",
+          "No labels applied - needs 'documentation' label",
+          "No review activity for 2.7 days",
+          "CONTRIBUTOR author (not bot) - quality check needed"
+        ],
+        "next_steps": [
+          "Check CI status - resolve if failing",
+          "Add 'documentation' label",
+          "Quick review: verify platform table accuracy",
+          "Verify all installation methods are current",
+          "Approve and merge"
+        ]
+      }
+    },
+    {
+      "number": 2717,
+      "title": "feat: distributed hive mind — HiveGraph protocol, federation, P2P Raft, quality audit",
+      "author": "rysweet",
+      "created_at": "2026-02-28T21:03:51Z",
+      "updated_at": "2026-03-02T04:19:42Z",
+      "age_hours": 64.1,
+      "draft": false,
+      "state": "open",
+      "mergeable": null,
+      "mergeable_state": "unknown",
+      "additions": 31036,
+      "deletions": 20849,
+      "changed_files": 180,
+      "commits": 43,
+      "labels": [],
+      "files": [],
+      "category": "major_feature",
+      "risk_level": "critical",
+      "priority": "low",
+      "assessment": {
+        "type": "experimental_feature",
+        "purpose": "Complete distributed hive mind system for goal-seeking agents with Kuzu database, HiveGraph protocol, federation, and P2P Raft consensus",
+        "complexity": "critical",
+        "conflicts": false,
+        "test_impact": "high",
+        "recommendation": "EXPERIMENTAL_TRACK_SEPARATELY",
+        "rationale": "Massive experimental feature: 31,036 additions / 20,849 deletions / 180 files / 43 commits. Introduces entirely new distributed system architecture. Age: 64.1 hours (2.7 days). mergeable_state='unknown'. This is a research/experimental PR that fundamentally changes the agent architecture. Should be tracked on experimental branch, not main.",
+        "concerns": [
+          "CRITICAL SCOPE: 31,036 additions across 180 files",
+          "Introduces entirely new distributed systems architecture",
+          "Requires Kuzu database, P2P networking, Raft consensus",
+          "High complexity and risk",
+          "No CI status available",
+          "No test coverage evident",
+          "Experimental nature - not production-ready",
+          "Should be on feature/experimental branch",
+          "Age: 2.7 days without review"
+        ],
+        "next_steps": [
+          "DO NOT MERGE to main",
+          "Move to experimental/hive-mind branch",
+          "Create RFC document describing architecture",
+          "Build comprehensive test suite",
+          "Create proof-of-concept demo",
+          "Establish evaluation criteria",
+          "Long-term: evaluate for production readiness",
+          "Consider breaking into incremental PRs"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_agent_prs": 4,
+    "by_status": {
+      "ready_for_review": 4,
+      "draft": 0
+    },
+    "by_priority": {
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    "by_risk": {
+      "low": 1,
+      "medium": 1,
+      "high": 1,
+      "critical": 1
+    },
+    "by_category": {
+      "critical_bugfix": 1,
+      "major_feature": 2,
+      "documentation_improvement": 1
+    },
+    "recommendations": {
+      "rebase_then_merge": 1,
+      "needs_ci_check_then_merge": 1,
+      "needs_comprehensive_review": 1,
+      "experimental_track_separately": 1
+    },
+    "blocking_issues": {
+      "merge_conflicts": ["PR 2774"],
+      "ci_unknown": ["PR 2727", "PR 2717"],
+      "ci_unstable": ["PR 2719"]
+    }
+  },
+  "actions_needed": {
+    "pr_2774": "HIGH PRIORITY - Rebase to fix conflicts, add labels, review hook changes, test manually, then merge",
+    "pr_2727": "MEDIUM PRIORITY - Wait for CI, consider splitting, add tests, comprehensive review needed",
+    "pr_2719": "READY - Check CI status, add documentation label, quick review, merge",
+    "pr_2717": "LOW PRIORITY - Move to experimental branch, create RFC, not ready for main"
+  }
+}
