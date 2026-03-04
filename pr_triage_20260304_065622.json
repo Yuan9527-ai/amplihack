@@ -1,0 +1,85 @@
+{
+  "triage_date": "2026-03-04T06:55:22Z",
+  "repository": "rysweet/amplihack",
+  "agent_prs_analyzed": 2,
+  "prs": [
+    {
+      "pr_number": 2873,
+      "title": "[docs] Daily documentation update for merged PRs (2026-03-04)",
+      "author": "github-actions[bot]",
+      "category": "documentation",
+      "risk_level": "low",
+      "priority": "medium",
+      "mergeable": true,
+      "draft": false,
+      "files_changed": 3,
+      "additions": 369,
+      "deletions": 6,
+      "ci_status": "pending",
+      "comments": 0,
+      "assessment": {
+        "type": "automated_documentation_update",
+        "scope": "docs_only",
+        "breaking_changes": false,
+        "test_coverage": "n/a",
+        "conflicts": false,
+        "recommendations": [
+          "Auto-merge once CI passes",
+          "Documentation-only changes are low risk",
+          "No manual review needed unless CI fails"
+        ]
+      },
+      "scores": {
+        "risk": 1,
+        "complexity": 1,
+        "impact": 2,
+        "urgency": 2
+      }
+    },
+    {
+      "pr_number": 2727,
+      "title": "feat: Fleet Orchestration — autonomous multi-VM coding agent management",
+      "author": "rysweet",
+      "category": "feature",
+      "risk_level": "high",
+      "priority": "high",
+      "mergeable": false,
+      "draft": false,
+      "files_changed": 119,
+      "additions": 25225,
+      "deletions": 562,
+      "ci_status": "pending",
+      "comments": 86,
+      "assessment": {
+        "type": "major_feature_addition",
+        "scope": "multi_vm_orchestration_lock_mode_co_pilot",
+        "breaking_changes": true,
+        "test_coverage": "partial",
+        "conflicts": true,
+        "recommendations": [
+          "MERGE CONFLICTS - requires manual resolution",
+          "Major feature with 119 files changed - needs thorough review",
+          "Integrates fleet orchestration with lock mode",
+          "Has 86 comments - requires maintainer attention",
+          "Test coverage appears partial - verify all critical paths",
+          "High-risk due to scope and architectural changes"
+        ]
+      },
+      "scores": {
+        "risk": 9,
+        "complexity": 10,
+        "impact": 10,
+        "urgency": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_agent_prs": 2,
+    "high_risk": 1,
+    "medium_risk": 0,
+    "low_risk": 1,
+    "blocked_by_conflicts": 1,
+    "ready_to_merge": 0,
+    "needs_review": 1
+  }
+}
