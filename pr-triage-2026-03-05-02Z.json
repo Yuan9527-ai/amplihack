@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-03-05T02:28:48Z",
+  "workflow_run": "22699399979",
+  "total_prs_analyzed": 5,
+  "prs": [
+    {
+      "number": 2881,
+      "title": "fix: make .claude/ hooks canonical, replace amplifier-bundle/ copy with symlink",
+      "type": "bugfix",
+      "scope": "infrastructure",
+      "risk": "HIGH",
+      "priority": "HIGH",
+      "impact_score": 85,
+      "metrics": {
+        "additions": 71,
+        "deletions": 28298,
+        "files_changed": 67,
+        "mergeable": "clean",
+        "ci_status": "pending"
+      },
+      "risk_factors": [
+        "Massive deletions (28k LOC) - potential data loss",
+        "67 files changed - wide surface area",
+        "Hook system modification - critical path",
+        "Symlink introduction - cross-platform concerns"
+      ],
+      "recommendation": "REVIEW_REQUIRED",
+      "next_actions": [
+        "Verify symlink works on Windows/macOS/Linux",
+        "Confirm no runtime breakage in hook execution",
+        "Validate backup/rollback plan exists"
+      ]
+    },
+    {
+      "number": 2877,
+      "title": "refactor: split cli.py into focused modules (#2845)",
+      "type": "refactor",
+      "scope": "core",
+      "risk": "MEDIUM",
+      "priority": "MEDIUM",
+      "impact_score": 70,
+      "metrics": {
+        "additions": 2129,
+        "deletions": 1753,
+        "files_changed": 10,
+        "mergeable": "clean",
+        "ci_status": "pending"
+      },
+      "risk_factors": [
+        "Core CLI refactoring - entry point changes",
+        "Backward compatibility claims need verification",
+        "Import path changes risk breakage"
+      ],
+      "recommendation": "TEST_COVERAGE_REVIEW",
+      "next_actions": [
+        "Verify import compatibility tests pass",
+        "Check all CLI commands still work",
+        "Confirm no performance regression"
+      ]
+    },
+    {
+      "number": 2876,
+      "title": "feat: distributed hive mind with DHT sharding",
+      "type": "feature",
+      "scope": "experimental",
+      "risk": "LOW",
+      "priority": "LOW",
+      "impact_score": 45,
+      "metrics": {
+        "additions": 1522,
+        "deletions": 3,
+        "files_changed": 8,
+        "mergeable": "clean",
+        "ci_status": "pending"
+      },
+      "risk_factors": [
+        "New feature, not core path",
+        "Experimental DHT implementation"
+      ],
+      "recommendation": "DEFER",
+      "next_actions": [
+        "Wait for CI to complete",
+        "Merge after higher priority PRs"
+      ]
+    },
+    {
+      "number": 2872,
+      "title": "refactor: split power_steering_checker.py 5063 LOC into 5 modules (issue #2845)",
+      "type": "refactor",
+      "scope": "core",
+      "risk": "EXTREME",
+      "priority": "HIGH",
+      "impact_score": 90,
+      "metrics": {
+        "additions": 61750,
+        "deletions": 30557,
+        "files_changed": 342,
+        "mergeable": "clean",
+        "ci_status": "pending"
+      },
+      "risk_factors": [
+        "EXTREME: 342 files changed - largest refactor",
+        "92k total line changes - massive scope",
+        "Power steering system - critical runtime component",
+        "9 comments suggest active discussion/concerns"
+      ],
+      "recommendation": "BLOCK_UNTIL_CI",
+      "next_actions": [
+        "MUST wait for CI success before any review",
+        "Require comprehensive test coverage validation",
+        "Consider breaking into smaller PRs"
+      ]
+    },
+    {
+      "number": 2870,
+      "title": "refactor: split stop.py 766 LOC into 3 modules, fix ImportError/except/counter bugs (#2845)",
+      "type": "refactor+bugfix",
+      "scope": "core",
+      "risk": "MEDIUM",
+      "priority": "HIGH",
+      "impact_score": 75,
+      "metrics": {
+        "additions": 748,
+        "deletions": 654,
+        "files_changed": 5,
+        "mergeable": "unstable",
+        "ci_status": "pending"
+      },
+      "risk_factors": [
+        "Stop/cleanup path - failure could leave residual state",
+        "Mergeable state 'unstable' - CI failures or conflicts",
+        "Bug fixes mixed with refactoring - harder to isolate issues"
+      ],
+      "recommendation": "FIX_MERGE_STATE",
+      "next_actions": [
+        "Resolve merge conflicts or CI failures",
+        "Once stable, review stop logic carefully",
+        "Validate cleanup behavior in error scenarios"
+      ]
+    }
+  ],
+  "summary": {
+    "high_risk_prs": 2,
+    "blocked_prs": 1,
+    "unstable_prs": 1,
+    "total_changes": {
+      "additions": 66220,
+      "deletions": 61265,
+      "files": 432
+    },
+    "primary_concern": "PR #2872 is extremely large (342 files, 92k LOC changes) and blocks effective review. PR #2881 has massive deletions that warrant careful validation.",
+    "recommended_merge_order": [2870, 2877, 2881, 2876],
+    "notes": "All PRs part of issue #2845 quality audit - systematic code cleanup initiative"
+  }
+}
