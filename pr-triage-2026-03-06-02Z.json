@@ -1,0 +1,109 @@
+{
+  "triage_date": "2026-03-06T02:26:48Z",
+  "summary": {
+    "total_prs": 8,
+    "by_category": {
+      "fix": 2,
+      "feat": 2,
+      "refactor": 4
+    },
+    "by_priority": {
+      "P0": 1,
+      "P1": 1,
+      "P2": 2,
+      "P3": 4
+    },
+    "blocked": 2,
+    "ready_to_merge": 1
+  },
+  "prs": [
+    {
+      "number": 2883,
+      "title": "fix: remove CLAUDECODE env var detection, centralize stripping",
+      "category": "fix",
+      "risk_score": 0,
+      "priority": "P0",
+      "recommendation": "READY - Approve and merge",
+      "changes": "+0 -0",
+      "files": 0,
+      "conflicts": false
+    },
+    {
+      "number": 2867,
+      "title": "refactor: extract CompactionContext/ValidationResult to compaction_context.py (issue #2845)",
+      "category": "refactor",
+      "risk_score": 4,
+      "priority": "P1",
+      "recommendation": "REVIEW - Code review required",
+      "changes": "+1009 -145",
+      "files": 6,
+      "conflicts": false
+    },
+    {
+      "number": 2877,
+      "title": "refactor: split cli.py into focused modules (#2845)",
+      "category": "refactor",
+      "risk_score": 6,
+      "priority": "P2",
+      "recommendation": "MONITOR - Track progress, review when ready",
+      "changes": "+2129 -1753",
+      "files": 10,
+      "conflicts": false
+    },
+    {
+      "number": 2870,
+      "title": "refactor: split stop.py 766 LOC into 3 modules, fix ImportError/except/counter bugs (#2845)",
+      "category": "refactor",
+      "risk_score": 6,
+      "priority": "P2",
+      "recommendation": "MONITOR - Track progress, review when ready",
+      "changes": "+1772 -654",
+      "files": 6,
+      "conflicts": false
+    },
+    {
+      "number": 2881,
+      "title": "fix: make .claude/ hooks canonical, replace amplifier-bundle/ copy with symlink",
+      "category": "fix",
+      "risk_score": 10,
+      "priority": "P3",
+      "recommendation": "DEFER - Address blockers before review",
+      "changes": "+71 -28298",
+      "files": 67,
+      "conflicts": false
+    },
+    {
+      "number": 2876,
+      "title": "feat: distributed hive mind with DHT sharding",
+      "category": "feat",
+      "risk_score": 10,
+      "priority": "P3",
+      "recommendation": "BLOCKED - Resolve merge conflicts first",
+      "changes": "+3548 -25",
+      "files": 18,
+      "conflicts": true
+    },
+    {
+      "number": 2872,
+      "title": "refactor: split power_steering_checker.py 5063 LOC into 5 modules (issue #2845)",
+      "category": "refactor",
+      "risk_score": 10,
+      "priority": "P3",
+      "recommendation": "DEFER - Address blockers before review",
+      "changes": "+13264 -10235",
+      "files": 37,
+      "conflicts": false
+    },
+    {
+      "number": 2727,
+      "title": "feat: Fleet Orchestration — autonomous multi-VM coding agent management",
+      "category": "feat",
+      "risk_score": 10,
+      "priority": "P3",
+      "recommendation": "BLOCKED - Resolve merge conflicts first",
+      "changes": "+26381 -562",
+      "files": 120,
+      "conflicts": true
+    }
+  ]
+}
