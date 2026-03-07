@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-03-07T06:49:00Z",
+  "workflow_run": "22794120070",
+  "total_prs": 9,
+  "triaged_prs": 8,
+  "summary": {
+    "extreme_risk": 2,
+    "high_risk": 2,
+    "medium_risk": 2,
+    "low_risk": 2,
+    "already_triaged": 1
+  },
+  "prs": [
+    {
+      "number": 2911,
+      "title": "[docs] Update documentation for power_steering_checker refactoring and Copilot CLI support",
+      "author": "github-actions[bot]",
+      "risk": "low",
+      "priority": "low",
+      "category": "documentation",
+      "recommendation": "auto-merge-candidate",
+      "changes": {"additions": 154, "deletions": 6, "files": 3},
+      "rationale": "Documentation only, no code changes, mergeable_state clean"
+    },
+    {
+      "number": 2888,
+      "title": "[docs] docs: add template variable quoting guidance based on PR #2887",
+      "author": "github-actions[bot]",
+      "risk": "low",
+      "priority": "low",
+      "category": "documentation",
+      "recommendation": "already triaged",
+      "changes": {"additions": 0, "deletions": 0, "files": 0},
+      "rationale": "Already has triage labels applied"
+    },
+    {
+      "number": 2883,
+      "title": "fix: remove CLAUDECODE env var detection, centralize stripping",
+      "author": "rysweet",
+      "risk": "medium",
+      "priority": "medium",
+      "category": "bug-fix",
+      "recommendation": "needs-review",
+      "changes": {"additions": 106, "deletions": 134, "files": 16},
+      "rationale": "Changes adapter selection logic, affects nested sessions, needs careful testing"
+    },
+    {
+      "number": 2881,
+      "title": "fix: make .claude/ hooks canonical, replace amplifier-bundle/ copy with symlink",
+      "author": "rysweet",
+      "risk": "high",
+      "priority": "high",
+      "category": "refactoring",
+      "recommendation": "needs-testing",
+      "changes": {"additions": 71, "deletions": 28298, "files": 67},
+      "rationale": "Major filesystem restructuring, 28k deletions, symlink strategy needs validation across platforms"
+    },
+    {
+      "number": 2877,
+      "title": "refactor: split cli.py into focused modules (#2845)",
+      "author": "rysweet",
+      "risk": "high",
+      "priority": "high",
+      "category": "refactoring",
+      "recommendation": "needs-testing",
+      "changes": {"additions": 2129, "deletions": 1753, "files": 10},
+      "rationale": "Major refactoring of core CLI module, backward compatibility critical, extensive testing required"
+    },
+    {
+      "number": 2876,
+      "title": "feat: distributed hive mind with DHT sharding",
+      "author": "rysweet",
+      "risk": "extreme",
+      "priority": "high",
+      "category": "feature",
+      "recommendation": "needs-deep-review",
+      "changes": {"additions": 14940, "deletions": 6195, "files": 118},
+      "rationale": "Massive new distributed system feature (21k changes, 118 files), mergeable_state dirty, includes critical bug fix"
+    },
+    {
+      "number": 2870,
+      "title": "refactor: split stop.py 766 LOC into 3 modules, fix ImportError/except/counter bugs (#2845)",
+      "author": "rysweet",
+      "risk": "medium",
+      "priority": "medium",
+      "category": "refactoring",
+      "recommendation": "needs-testing",
+      "changes": {"additions": 1772, "deletions": 654, "files": 6},
+      "rationale": "Refactoring plus bug fixes, affects session stop behavior, needs testing"
+    },
+    {
+      "number": 2867,
+      "title": "refactor: extract CompactionContext/ValidationResult to compaction_context.py (issue #2845)",
+      "author": "rysweet",
+      "risk": "low",
+      "priority": "low",
+      "category": "refactoring",
+      "recommendation": "needs-review",
+      "changes": {"additions": 1009, "deletions": 145, "files": 6},
+      "rationale": "Code organization change, moving dataclasses to new module, relatively safe refactoring"
+    },
+    {
+      "number": 2727,
+      "title": "feat: Fleet Orchestration — autonomous multi-VM coding agent management",
+      "author": "rysweet",
+      "risk": "extreme",
+      "priority": "high",
+      "category": "feature",
+      "recommendation": "needs-deep-review",
+      "changes": {"additions": 27549, "deletions": 561, "files": 122},
+      "rationale": "Massive feature (28k changes, 122 files), autonomous VM management introduces complex distributed system concerns, mergeable_state dirty"
+    }
+  ]
+}

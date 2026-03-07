@@ -2,3 +2,4 @@
 {"timestamp": "2026-03-03T13:07:00Z", "pr_number": 2802, "title": "chore: clean up repo root — remove result artifacts, move scripts to scripts/", "author": "Copilot", "category": "Maintenance/Cleanup", "risk_level": "MODERATE", "priority": "P2", "recommendation": "NEEDS_REVIEW", "files_changed": 94, "additions": 9, "deletions": 13545, "status": "open", "draft": true}
 {"timestamp":"2026-03-04T18:58:57Z","run":"22684405845","prs_triaged":1,"file":"pr-triage-2026-03-04-18Z.json"}
 {"timestamp":"2026-03-05T13:09:51Z","workflow_run":"22719381000","total_prs":8,"extreme_risk":2,"high_priority":5,"stale":1,"actions_taken":{"issues_created":3,"comments_added":7,"fast_track":1,"blocked":2}}
+{"timestamp":"2026-03-07T06:49:00Z","workflow_run":"22794120070","total_prs":9,"triaged":8,"extreme_risk":2,"high_risk":2,"medium_risk":2,"low_risk":3,"action":"triaged 8 PRs with labels and detailed comments"}

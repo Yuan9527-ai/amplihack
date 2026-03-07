@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-03-06T18:55:07Z",
-  "workflow_run": "22777458826",
-  "total_agent_prs": 1,
+  "timestamp": "2026-03-07T06:49:00Z",
+  "workflow_run": "22794120070",
+  "total_agent_prs": 9,
   "by_status": {
-    "triaged": 1,
+    "triaged": 9,
     "pending_triage": 0
   },
   "by_priority": {
-    "high": 0,
-    "medium": 0,
-    "low": 1
+    "high": 4,
+    "medium": 2,
+    "low": 3
   },
   "by_risk": {
-    "extreme": 0,
-    "high": 0,
-    "medium": 0,
-    "low": 1
+    "extreme": 2,
+    "high": 2,
+    "medium": 2,
+    "low": 3
   },
-  "latest_triage_file": "pr-triage-2026-03-06-18Z.json"
+  "latest_triage_file": "pr-triage-2026-03-07-06Z.json"
 }
