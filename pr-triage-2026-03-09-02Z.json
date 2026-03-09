@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-03-09T02:32:47Z",
+  "workflow_run": "22835930392",
+  "total_agent_prs": 3,
+  "prs_analyzed": [
+    {
+      "number": 2962,
+      "title": "feat!: remove Python recipe runner — Rust-only execution",
+      "author": "rysweet",
+      "status": "NEW",
+      "category": "breaking_change",
+      "risk_level": "extreme",
+      "priority": "critical",
+      "mergeable": true,
+      "draft": false,
+      "changed_files": 41,
+      "additions": 401,
+      "deletions": 12278,
+      "commits": 3,
+      "ci_status": "pending",
+      "blockers": ["breaking_change", "missing_rust_binary_in_ci", "test_plan_incomplete"],
+      "key_observations": [
+        "BREAKING: Removes 12,241 lines of Python recipe runner code",
+        "All execution now requires Rust binary (recipe-runner-rs)",
+        "Version bump to 0.6.0 indicates breaking change",
+        "41 files deleted including entire adapters/ directory",
+        "Test plan shows unchecked items: CI passes, Rust binary verification",
+        "Migration path provided but requires external binary installation",
+        "Removes 24 test files covering 10,818 LOC of test coverage"
+      ],
+      "recommended_action": "block_until_prerequisites_met",
+      "reasoning": "Extreme risk due to hard dependency on external Rust binary. Cannot merge until: (1) recipe-runner-rs is installed in CI, (2) all tests pass, (3) fallback strategy defined for environments without Rust toolchain."
+    },
+    {
+      "number": 2876,
+      "title": "feat: distributed hive mind with DHT sharding + improved eval recall (51.2% → ≥83.9%)",
+      "author": "rysweet",
+      "status": "ONGOING",
+      "category": "feature",
+      "risk_level": "extreme",
+      "priority": "high",
+      "mergeable": false,
+      "draft": false,
+      "changed_files": 157,
+      "additions": 24351,
+      "deletions": 6210,
+      "commits": 74,
+      "ci_status": "pending",
+      "blockers": ["merge_conflicts", "extreme_complexity", "age"],
+      "key_observations": [
+        "Massive PR: 157 files, 24K additions, 6K deletions, 74 commits",
+        "Complex distributed system: HiveMindOrchestrator, DHT sharding, gossip",
+        "5 days old and growing (74 commits indicate ongoing development)",
+        "Claims 51.2% → 83.9% eval recall improvement",
+        "Mergeable state: unknown (likely conflicts)",
+        "Contains multiple independent features bundled together"
+      ],
+      "recommended_action": "decompose_into_focused_prs",
+      "reasoning": "Unreviewable scope. Should be split into: (1) HiveMindOrchestrator core, (2) DHT sharding implementation, (3) Eval improvements with benchmarks. Current size creates merge risk and makes rollback impossible."
+    },
+    {
+      "number": 2727,
+      "title": "feat: Fleet Orchestration — autonomous multi-VM coding agent management",
+      "author": "rysweet",
+      "status": "STALE",
+      "category": "feature",
+      "risk_level": "extreme",
+      "priority": "low",
+      "mergeable": false,
+      "draft": false,
+      "changed_files": 132,
+      "additions": 31402,
+      "deletions": 605,
+      "commits": 167,
+      "ci_status": "pending",
+      "blockers": ["merge_conflicts", "extreme_complexity", "stale", "age"],
+      "key_observations": [
+        "Extremely stale: 9 days old with 167 commits",
+        "Massive scope: 132 files, 31K additions",
+        "Mergeable state: unknown (likely severe conflicts)",
+        "Bundled changes: module split, backend fixes, test coverage, azlin discovery",
+        "High comment activity suggests extensive iteration",
+        "Likelihood of merge conflicts with main is very high"
+      ],
+      "recommended_action": "close_and_restart",
+      "reasoning": "Too large, too stale, too complex. After 9 days and 167 commits, this PR is unmergeable. Recommend: (1) Close this PR, (2) Extract critical bug fixes into hotfix PR, (3) Create incremental feature PRs for fleet components with proper sequencing."
+    }
+  ],
+  "summary": {
+    "by_priority": {
+      "critical": 1,
+      "high": 1,
+      "low": 1
+    },
+    "by_risk": {
+      "extreme": 3
+    },
+    "by_status": {
+      "new": 1,
+      "ongoing": 1,
+      "stale": 1
+    },
+    "by_mergeable": {
+      "true": 1,
+      "false": 2
+    },
+    "total_changed_files": 330,
+    "total_additions": 56154,
+    "total_deletions": 19093,
+    "total_commits": 244,
+    "blockers_summary": {
+      "merge_conflicts": 2,
+      "extreme_complexity": 3,
+      "stale": 1,
+      "breaking_change": 1,
+      "missing_prerequisites": 1
+    }
+  },
+  "critical_issues": [
+    {
+      "issue": "100% of agent PRs are extremely large (>40 files each)",
+      "impact": "All PRs are effectively unreviewable due to scope",
+      "recommendation": "Implement hard limits: max 20 files, max 2K LOC changed per PR"
+    },
+    {
+      "issue": "66% of PRs have merge conflicts (2 of 3)",
+      "impact": "Blocks automated merging, indicates branch divergence",
+      "recommendation": "Daily auto-rebase for agent PRs or merge/close decision within 48h"
+    },
+    {
+      "issue": "PR #2962 introduces hard dependency on external Rust binary",
+      "impact": "Breaking change affects all recipe execution; no graceful degradation",
+      "recommendation": "Block merge until CI environment includes recipe-runner-rs and fallback strategy documented"
+    },
+    {
+      "issue": "No CI checks configured (all PRs show total_count: 0)",
+      "impact": "Cannot verify tests pass, lints pass, or builds succeed",
+      "recommendation": "Configure GitHub Actions to run tests on every PR"
+    },
+    {
+      "issue": "Average PR age: 5 days (oldest: 9 days)",
+      "impact": "Stale PRs accumulate conflicts and become unmergeable",
+      "recommendation": "SLA: Review within 24h, merge/close decision within 72h"
+    }
+  ],
+  "next_actions": [
+    {
+      "priority": 1,
+      "action": "Block PR #2962 until prerequisites met",
+      "rationale": "Breaking change requires: (1) Rust binary in CI, (2) all tests passing, (3) migration guide validation",
+      "estimated_effort": "2-4 hours to update CI and verify"
+    },
+    {
+      "priority": 2,
+      "action": "Close PR #2727 and create incremental PRs",
+      "rationale": "9 days + 167 commits + 132 files = unmaintainable. Start fresh with focused PRs",
+      "estimated_effort": "Close immediately, extract critical fixes first"
+    },
+    {
+      "priority": 3,
+      "action": "Decompose PR #2876 or enforce rebase",
+      "rationale": "157 files is too large. Split into 3-4 focused PRs or close and restart",
+      "estimated_effort": "6-8 hours to decompose properly"
+    }
+  ]
+}
