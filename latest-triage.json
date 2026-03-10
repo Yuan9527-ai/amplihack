@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-03-10T03:00:00Z",
-  "run": "22884144151",
-  "prs": 4,
+  "timestamp": "2026-03-10T07:00:00Z",
+  "run": "22890863527",
+  "prs": 5,
   "new": 2,
-  "ongoing": 2,
-  "stale": 0,
+  "ongoing": 1,
+  "stale": 2,
   "risk": {
-    "low": 1,
+    "low": 2,
     "high": 1,
     "extreme": 2
   },
-  "file": "pr-triage-2026-03-10-03Z.json"
+  "file": "pr-triage-2026-03-10-07Z.json"
 }
